@@ -40,10 +40,12 @@ export default function TextArea(props) {
   return (
     <>
     <div>
-        <div className="mb-3">
+        <div className="mb-3" style={{color:props.modes === 'light' ? 'black' : 'white' }}>
         <h1>{props.headLine}</h1>
         <textarea className="form-control" id="exampleFormControlTextarea1" rows="6" value={text}
             onChange={handleOnChange}
+            style={{backgroundColor: props.modes === 'light' ? 'white' : '#85929e',
+            color:props.modes === 'light' ? 'black' : 'white'}}
          ></textarea>
         </div>
         <button type="button" className="btn btn-primary mx-1" onClick={OnClickUpperCase} >Convert To UpperCase</button>
@@ -54,10 +56,11 @@ export default function TextArea(props) {
     </div>
 
 
-    <div className="container my-4">
+    <div className="container my-4" style={{color:props.modes === 'light' ? 'black' : 'white' }}>
         <h2>Your Text Summary</h2>
         <p>Total Number of Words <b>{text.split(' ').length}</b> and Characters <b>{text.length}</b></p>
         <p>{0.008 * text.split(' ').length} Minutes To read</p>
+     
         <h2>Text Preview</h2>
         <p>{text}</p>
 
