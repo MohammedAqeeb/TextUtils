@@ -52,7 +52,12 @@ function App() {
 
     <Alert alert={alert}/>
       <Routes>
-        {/* Home  Routes*/}
+     
+        <Route index element={ <div className="container my-3">
+          <TextArea headLine='Enter the text to change'modes={mode}></TextArea>
+          </div>
+        } />
+        
         <Route path="/home" element={
           <div className="container my-3">
           <TextArea headLine='Enter the text to change'modes={mode}></TextArea>
@@ -60,7 +65,7 @@ function App() {
         }/>
 
         {/* About  Routes*/}
-        <Route exact path="/about" element={<About />} />
+        <Route exact path="/about" element={<About modes={mode} />} />
     
       </Routes>
     </BrowserRouter>

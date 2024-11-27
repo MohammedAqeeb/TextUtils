@@ -9,7 +9,7 @@ export default function Alert(props) {
   return (
  
    props.alert && <div class={`alert alert-${props.alert.type}`} role="alert">
-        <h4 class="alert-heading">{capitalize(props.alert.type)}</h4>
+        <h4 className="alert-heading">{capitalize(props.alert.type)}</h4>
         <p>{props.alert.msg}</p>
     </div>
   
